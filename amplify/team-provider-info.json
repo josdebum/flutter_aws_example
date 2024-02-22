@@ -1,0 +1,33 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-flutterawsproject-dev-231655-authRole",
+      "UnauthRoleArn": "arn:aws:iam::767398095267:role/amplify-flutterawsproject-dev-231655-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::767398095267:role/amplify-flutterawsproject-dev-231655-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-flutterawsproject-dev-231655-deployment",
+      "UnauthRoleName": "amplify-flutterawsproject-dev-231655-unauthRole",
+      "StackName": "amplify-flutterawsproject-dev-231655",
+      "StackId": "arn:aws:cloudformation:us-west-1:767398095267:stack/amplify-flutterawsproject-dev-231655/f07c21e0-d106-11ee-a5a9-06f5a172f671",
+      "AmplifyAppId": "d32jh83ulf2x5f"
+    }
+  },
+  "app": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-flutterawsproject-app-145728-authRole",
+      "UnauthRoleArn": "arn:aws:iam::767398095267:role/amplify-flutterawsproject-app-145728-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::767398095267:role/amplify-flutterawsproject-app-145728-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-flutterawsproject-app-145728-deployment",
+      "UnauthRoleName": "amplify-flutterawsproject-app-145728-unauthRole",
+      "StackName": "amplify-flutterawsproject-app-145728",
+      "StackId": "arn:aws:cloudformation:us-west-1:767398095267:stack/amplify-flutterawsproject-app-145728/55758040-d18a-11ee-9f43-06bc4697431d",
+      "AmplifyAppId": "d32jh83ulf2x5f"
+    },
+    "categories": {
+      "auth": {
+        "flutterawsproject1faaa150": {}
+      }
+    }
+  }
+}

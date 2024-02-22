@@ -35,7 +35,8 @@ class LoginScreenState extends State<LoginScreen> {
                   textColor: kWhite,
                   height: 50.h,
                   onTap: () async{
-                await authRepo.signInUser(usernameController.text, passwordController.text);
+
+                await authRepo.signInUser(usernameController.text, passwordController.text, context);
                   },
                   hasBorder: false).addHeight(40.h),
               Padding(padding:

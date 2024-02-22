@@ -1,7 +1,9 @@
 import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_aws_project/auth_screens/email_confirmation_page.dart';
+import 'package:flutter_aws_project/auth_screens/signin_screen.dart';
 import 'package:flutter_aws_project/auth_screens/signup_screen.dart';
+import 'package:flutter_aws_project/home_screens/home_screen.dart';
 
 class AuthenticationRepo {
   /// Signs a user up with a username, password, and email. The required
@@ -79,20 +81,35 @@ class AuthenticationRepo {
     }
   }
 
-  Future<void> signInUser(String username, String password) async {
+  Future<void> signInUser(String username, String password, BuildContext context) async {
     try {
-
       final result = await Amplify.Auth.signIn(
         username: username,
         password: password,
       );
       print(result);
+
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) =>
+      const HomeScreen()));
       await _handleSignInResult(result);
     } on AuthException catch (e) {
       safePrint('Error signing in: ${e.message}');
     }
   }
+  Future<void> logOut(BuildContext context) async {
+    try {
+      final result = await Amplify.Auth.signOut(
+      );
+      print(result);
 
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) =>
+      const LoginScreen()));
+    } on AuthException catch (e) {
+      safePrint('Error signing in: ${e.message}');
+    }
+  }
   Future<void> _handleSignInResult(SignInResult result) async {
     switch (result.nextStep.signInStep) {
       case AuthSignInStep.confirmSignInWithSmsMfaCode:
@@ -125,9 +142,4 @@ class AuthenticationRepo {
         break;
     }
   }
-
-
-
-
-
 }

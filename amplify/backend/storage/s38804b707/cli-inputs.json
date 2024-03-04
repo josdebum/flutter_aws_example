@@ -1,0 +1,14 @@
+{
+  "resourceName": "s38804b707",
+  "policyUUID": "8804b707",
+  "bucketName": "flutterawsproject62ed09c7fb1b4f44b024b3e5d3a9fc",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

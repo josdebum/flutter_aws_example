@@ -81,10 +81,6 @@ class ClothDescriptionScreenState extends State<ClothDescriptionScreen> {
                 Text("36cm") ,
                   Icon(Icons.delete),
                 ]),
-
-
-
-
             ]))
 
     ])));

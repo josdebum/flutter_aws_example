@@ -39,6 +39,7 @@ dependencies:
   amplify_auth_cognito: ^1.0.0
   dotted_border: ^2.0.0+3
   amplify_storage_s3: ^1.0.0
+  image_picker: ^1.0.4
   amplify_datastore: ^1.0.0-supports-only-mobile
 
 

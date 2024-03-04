@@ -1,6 +1,6 @@
 import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:flutter_aws_project/models/ModelProvider.dart';
-
+import 'package:amplify_storage_s3/amplify_storage_s3.dart';
 class HomeRepo {
   List<Post> fetchedPost = [];
 
@@ -43,6 +43,26 @@ class HomeRepo {
       safePrint('Posts: $posts');
     } on DataStoreException catch (e) {
       safePrint('Something went wrong querying posts: ${e.message}');
+    }
+  }
+
+
+
+  Future<void> uploadExampleData() async {
+    const dataString = 'Example file contents';
+
+    try {
+      final result = await Amplify.Storage.uploadData(
+        data: S3DataPayload.string(dataString),
+        key: 'ExampleKey',
+        onProgress: (progress) {
+          safePrint('Transferred bytes: ${progress.transferredBytes}');
+        },
+      ).result;
+
+      safePrint('Uploaded data to location: ${result.uploadedItem.key}');
+    } on StorageException catch (e) {
+      safePrint(e.message);
     }
   }
 }
